@@ -1,5 +1,6 @@
 package com.example.EmployeeManagement.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
 @Entity
@@ -8,6 +9,8 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private Integer id;
 
     private String name;
